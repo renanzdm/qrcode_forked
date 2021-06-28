@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:qrcode_forked/qrcode.dart';
+import 'package:qrcode_forked/qrcode_forked.dart';
 
 void main() => runApp(MyApp());
 
