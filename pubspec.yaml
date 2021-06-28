@@ -1,5 +1,5 @@
 name: qrcode_forked
-description: A flutter plugin for scanning QR codes. Use AVCaptureSession in iOS and zxing in Android.
+description: A flutter plugin for scanning QR codes.
 version: 0.0.1
 homepage: https://github.com/renanzdm/qrcode_forked
 environment:
