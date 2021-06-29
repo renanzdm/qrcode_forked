@@ -1,6 +1,6 @@
 name: qrcode_forked
 description: A flutter plugin used to read qrCodes. I forked the qrCode plugin and migrated it to nullsafety. Currently running android and ios.
-version: 0.0.3
+version: 0.0.4
 homepage: https://github.com/renanzdm/qrcode_forked
 environment:
   sdk: ">=2.12.0 <3.0.0"
