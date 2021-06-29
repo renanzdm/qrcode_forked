@@ -10,13 +10,13 @@ enum CaptureTorchMode { on, off }
 class QRCaptureController {
   late MethodChannel _methodChannel;
   late CaptureCallback _capture;
-  
+
   QRCaptureController();
 
   void _onPlatformViewCreated(int id) {
     _methodChannel = MethodChannel('plugins/qr_capture/method_$id');
     _methodChannel.setMethodCallHandler((MethodCall call) async {
-      if (call.method == 'onCaptured') { 
+      if (call.method == 'onCaptured') {
         if (call.arguments != null) {
           _capture(call.arguments.toString());
         }
@@ -44,6 +44,7 @@ class QRCaptureController {
 
 class QRCaptureView extends StatefulWidget {
   final QRCaptureController controller;
+
   QRCaptureView({Key? key, required this.controller}) : super(key: key);
 
   @override
@@ -53,19 +54,19 @@ class QRCaptureView extends StatefulWidget {
 }
 
 class QRCaptureViewState extends State<QRCaptureView> {
-
   @override
   Widget build(BuildContext context) {
     if (Platform.isIOS) {
       return UiKitView(
-      viewType: 'plugins/qr_capture_view',
-      creationParamsCodec: StandardMessageCodec(),
-      onPlatformViewCreated: (id) {
+        viewType: 'plugins/qr_capture_view',
+        creationParamsCodec: StandardMessageCodec(),
+        onPlatformViewCreated: (id) {
           widget.controller._onPlatformViewCreated(id);
         },
       );
     } else {
-      return AndroidView(viewType: 'plugins/qr_capture_view',
+      return AndroidView(
+        viewType: 'plugins/qr_capture_view',
         creationParamsCodec: StandardMessageCodec(),
         onPlatformViewCreated: (id) {
           widget.controller._onPlatformViewCreated(id);

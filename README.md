@@ -69,6 +69,37 @@ class _MyAppState extends State<MyApp> {
   }
 }
 ```
+***Methods***
+
+## Pause capture
+```dart
+void pause() {
+    _methodChannel.invokeMethod('pause');
+  }
+```
+## Resume capture
+```dart
+void resume() {
+    _methodChannel.invokeMethod('resume');
+  }
+```
+## Turn on the flashlight
+```dart
+set torchMode(CaptureTorchMode mode) {
+    var isOn = mode == CaptureTorchMode.on;
+    _methodChannel.invokeMethod('setTorchMode', isOn);
+  }
+
+```
+
+## Capture Mode
+```dart
+ QRCaptureController _captureController = QRCaptureController();
+ _captureController.torchMode = CaptureTorchMode.off;
+```
+
+
+
 
 ## Integration
 
