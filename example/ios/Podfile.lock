@@ -1,0 +1,22 @@
+PODS:
+  - Flutter (1.0.0)
+  - qrcode_forked (0.0.1):
+    - Flutter
+
+DEPENDENCIES:
+  - Flutter (from `Flutter`)
+  - qrcode_forked (from `.symlinks/plugins/qrcode_forked/ios`)
+
+EXTERNAL SOURCES:
+  Flutter:
+    :path: Flutter
+  qrcode_forked:
+    :path: ".symlinks/plugins/qrcode_forked/ios"
+
+SPEC CHECKSUMS:
+  Flutter: 50d75fe2f02b26cc09d224853bb45737f8b3214a
+  qrcode_forked: 29fb841ce02e39e4760247a3cde082651620336f
+
+PODFILE CHECKSUM: 8e679eca47255a8ca8067c4c67aab20e64cb974d
+
+COCOAPODS: 1.10.2

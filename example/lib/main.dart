@@ -33,16 +33,16 @@ class _MyAppState extends State<MyApp> with TickerProviderStateMixin {
     _animation =
         AlignmentTween(begin: Alignment.topCenter, end: Alignment.bottomCenter)
             .animate(_animationController)
-              ..addListener(() {
-                setState(() {});
-              })
-              ..addStatusListener((status) {
-                if (status == AnimationStatus.completed) {
-                  _animationController.reverse();
-                } else if (status == AnimationStatus.dismissed) {
-                  _animationController.forward();
-                }
-              });
+          ..addListener(() {
+            setState(() {});
+          })
+          ..addStatusListener((status) {
+            if (status == AnimationStatus.completed) {
+              _animationController.reverse();
+            } else if (status == AnimationStatus.dismissed) {
+              _animationController.forward();
+            }
+          });
     _animationController.forward();
   }
 
@@ -57,7 +57,7 @@ class _MyAppState extends State<MyApp> with TickerProviderStateMixin {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('扫一扫'),
+          title: const Text('QrCode'),
         ),
         body: Stack(
           alignment: Alignment.center,
