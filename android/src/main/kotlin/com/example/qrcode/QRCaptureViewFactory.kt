@@ -9,11 +9,11 @@ import io.flutter.plugin.platform.PlatformView
 import io.flutter.plugin.platform.PlatformViewFactory
 
 
-class QRCaptureViewFactory(private val messenger: BinaryMessenger) :
+class QRCaptureViewFactory(private val messenger: BinaryMessenger?) :
     PlatformViewFactory(StandardMessageCodec.INSTANCE) {
 
     override fun create(context: Context, id: Int, obj: Any?): PlatformView {
-        return QRCaptureView(id, messenger, context)
+        return QRCaptureView(id, messenger!!, context)
     }
 
 }
